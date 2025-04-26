@@ -23,7 +23,7 @@ jobs:
     environment: test
     env:
       BYTEBASE_URL: https://miserably-fancy-ostrich.ngrok-free.app
-      BYTEBASE_SERVICE_ACCOUNT: api-example@service.bytebase.com
+      BYTEBASE_SERVICE_ACCOUNT: api-sample@service.bytebase.com
       BYTEBASE_PROJECT: "projects/project-sample"
       # The Bytebase rollout pipeline will deploy to 'test' and 'prod' environments.
       # 'deploy-to-test' job rollouts the 'test' stage and 'deploy-to-prod' job rollouts the 'prod' stage.
@@ -35,9 +35,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Verify Service Availability
-        run: |
-          curl -I http://localhost:80 || echo "Service is not running"
       - name: Debug Ngrok
         run: |
           curl -I https://miserably-fancy-ostrich.ngrok-free.app || echo "Ngrok tunnel is not reachable"
