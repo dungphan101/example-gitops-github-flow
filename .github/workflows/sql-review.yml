@@ -17,7 +17,7 @@ jobs:
       BYTEBASE_URL: https://miserably-fancy-ostrich.ngrok-free.app
       BYTEBASE_SERVICE_ACCOUNT: api-sample@service.bytebase.com
       BYTEBASE_PROJECT: "projects/project-sample"
-      BYTEBASE_TARGETS: "instances/test-sample-instance/databases/hr_test,instances/prod-sample-instance/databases/hr_prod"
+      BYTEBASE_TARGETS: "instances/test-sample-instance/databases/hr_test"
       FILE_PATTERN: "migrations/*.sql"
     steps:
       - name: Checkout
