@@ -17,7 +17,7 @@ jobs:
       BYTEBASE_URL: https://miserably-fancy-ostrich.ngrok-free.app
       BYTEBASE_SERVICE_ACCOUNT: api-sample@service.bytebase.com
       BYTEBASE_PROJECT: "projects/project-sample"
-      BYTEBASE_TARGETS: "instances/mysql-test-instance/databases/mysql_bee_test,instances/mysql-prod-instance/databases/mysql_bee_prod"
+      BYTEBASE_TARGETS: "instances/mysql-test-instance/databases/mysql-stg-db,instances/mysql-prod-instance/databases/mysql-prod-db"
       FILE_PATTERN: "migrations/*.sql"
     steps:
       - name: Checkout
@@ -52,7 +52,7 @@ jobs:
       BYTEBASE_URL: https://miserably-fancy-ostrich.ngrok-free.app
       BYTEBASE_SERVICE_ACCOUNT: api-sample@service.bytebase.com
       BYTEBASE_PROJECT: "projects/project-sample"
-      BYTEBASE_TARGETS: "instances/mysql-prod-instance/databases/mysql_bee_prod"
+      BYTEBASE_TARGETS: "instances/mysql-prod-instance/databases/mysql-prod-db"
       FILE_PATTERN: "migrations/*.sql"
     steps:
       - name: Checkout
