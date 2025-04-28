@@ -27,7 +27,7 @@ jobs:
       BYTEBASE_PROJECT: "projects/project-sample"
       # The Bytebase rollout pipeline will deploy to 'test' and 'prod' environments.
       # 'deploy-to-test' job rollouts the 'test' stage and 'deploy-to-prod' job rollouts the 'prod' stage.
-      BYTEBASE_TARGETS: "instances/test-sample-instance/databases/bee_test,instances/prod-sample-instance/databases/bee_prod"
+      BYTEBASE_TARGETS: "instances/mysql-test-instance/databases/mysql_bee_test,instances/mysql-prod-instance/databases/mysql_bee_prod"
       FILE_PATTERN: "migrations/*.sql"
     outputs:
       bytebase-plan: ${{ steps.create-plan.outputs.plan }}
