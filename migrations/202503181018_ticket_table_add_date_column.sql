@@ -1,2 +1,0 @@
-ALTER TABLE ticket ADD COLUMN release_date DATE NOT NULL;
-

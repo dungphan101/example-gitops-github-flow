@@ -15,7 +15,7 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # set GITHUB_TOKEN because the 'Check release' step needs it to comment the pull request with check results.
       BYTEBASE_URL: https://miserably-fancy-ostrich.ngrok-free.app
-      BYTEBASE_SERVICE_ACCOUNT: api-sample@service.bytebase.com
+      BYTEBASE_SERVICE_ACCOUNT: api-staging@service.bytebase.com
       BYTEBASE_PROJECT: "projects/project-sample"
       BYTEBASE_TARGETS: "instances/mysql-test-instance/databases/mysql-stg-db,instances/mysql-prod-instance/databases/mysql-prod-db"
       FILE_PATTERN: "migrations/*.sql"
@@ -50,7 +50,7 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # set GITHUB_TOKEN because the 'Check release' step needs it to comment the pull request with check results.
       BYTEBASE_URL: https://miserably-fancy-ostrich.ngrok-free.app
-      BYTEBASE_SERVICE_ACCOUNT: api-sample@service.bytebase.com
+      BYTEBASE_SERVICE_ACCOUNT: api-staging@service.bytebase.com
       BYTEBASE_PROJECT: "projects/project-sample"
       BYTEBASE_TARGETS: "instances/mysql-prod-instance/databases/mysql-prod-db"
       FILE_PATTERN: "migrations/*.sql"
